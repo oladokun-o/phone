@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+</head>
+<style>
+    body {
+        background: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding-top: 30%;
+        color: white;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @media only screen and (min-width: 700px) {
+        body {
+            padding-top: 15%;
+        }
+    }
+    
+    .case {
+        border: 3px solid rgba(0, 0, 0, 0.479);
+        height: 386px;
+        width: 150px;
+        padding: 12px;
+        padding-right: 48px;
+        background: rgb(65, 66, 68);
+        border-bottom-right-radius: 45px;
+        border-bottom-left-radius: 45px;
+        border-top-right-radius: 45px;
+        border-top-left-radius: 45px;
+        box-shadow: 0 0 30px rgba(8, 8, 8, 0.815);
+    }
+    
+    .screen {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 550;
+        letter-spacing: 0.5px;
+        border: 3px solid white;
+        height: 130px;
+        width: 148px;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        margin-bottom: 8px;
+        padding: 18px;
+        background: rgb(74, 77, 84);
+        background: linear-gradient(rgba(0, 0, 0, 0.884), rgba(255, 255, 255, 0.205), rgba(0, 0, 0, 0.849));
+    }
+    
+    .screen hr {
+        border: 2px solid black;
+        width: 40px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        margin-top: -5px;
+    }
+    
+    .nav-btn {
+        height: 55px;
+        width: 182px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: flex;
+    }
+    
+    .num-btn {
+        height: 120px;
+        width: 179px;
+        margin-bottom: 8px;
+        padding-top: 0px;
+        padding-bottom: 15px;
+        display: flex;
+    }
+    
+    .main-screen {
+        height: 108px;
+        width: 148px;
+        border-radius: 5px;
+        background: white;
+        background-image: url(start.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .main-screen img {
+        border-radius: 5px;
+    }
+    
+    .main-screen {
+        height: 108px;
+        animation: fade .50s;
+    }
+    
+    @keyframes fade {
+        0% {
+            opacity: 0.5;
+        }
+        50% {
+            opacity: 1;
+        }
+        60% {
+            opacity: 0;
+        }
+        70% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    #Start {
+        animation: fade-in 5s;
+    }
+    
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.1;
+        }
+        70% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .blank {
+        height: 108px;
+        width: 148px;
+        border-radius: 5px;
+        background: rgb(0, 128, 0);
+    }
+    
+    .main-btn {
+        height: 60px;
+        width: 120px;
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        box-shadow: 0 0 10px rgb(8, 8, 8);
+        background: rgb(92, 93, 95);
+        border: none;
+    }
+    
+    .inner-main-btn {
+        border: 1px solid white;
+        background: rgb(23, 24, 26);
+        height: 50px;
+        width: 50px;
+        border-radius: 7px;
+    }
+    
+    .menu,
+    .call,
+    .opt,
+    .home {
+        height: 25px;
+        width: 53px;
+        border-radius: 20px;
+        margin-bottom: 5px;
+        box-shadow: 0 0 10px rgb(8, 8, 8);
+    }
+    
+    .num-middle {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    
+    .num {
+        height: 25px;
+        width: 53px;
+        border-radius: 20px;
+        margin-bottom: 5px;
+        box-shadow: 0 0 10px rgb(8, 8, 8);
+    }
+    
+    .menu,
+    .call,
+    .opt,
+    .home,
+    .num {
+        background: rgb(23, 24, 26);
+    }
+    
+    .menu hr,
+    .opt hr {
+        width: 15px;
+    }
+    
+    .call hr {
+        width: 15px;
+        border: 1px solid green;
+    }
+    
+    .home hr {
+        width: 15px;
+        border: 1px solid red;
+    }
+    
+    button {
+        outline: none;
+        color: white;
+        font-family: 'Times New Romans';
+    }
+    
+    button:active {
+        transform: translateY(-1px);
+    }
+    
+    .num-btm-left {
+        border-bottom-left-radius: 60px;
+    }
+    
+    .num-btm-right {
+        border-bottom-right-radius: 60px;
+    }
+    
+    .power-on {
+        color: black;
+        position: fixed;
+        bottom: 1%;
+        display: flex;
+        font-family: 'segoe ui';
+    }
+    
+    .power-on a {
+        color: red;
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.082);
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 29px;
+        box-shadow: 0 0 8px rgba(8, 8, 8, 0.377);
+        text-decoration: none;
+        background: rgb(23, 24, 26);
+        margin-left: 15px;
+    }
+    
+    .power-on-anim {
+        transform: translateY(16px);
+        animation: click .50s linear infinite;
+    }
+    
+    @keyframes click {
+        0% {
+            transform: translateY(17px);
+        }
+    }
+    
+    .power-on a {
+        animation: expand .50s linear infinite;
+    }
+    
+    @keyframes expand {
+        0% {
+            box-shadow: 0 0 10px rgba(8, 8, 8, 0.548);
+        }
+        50% {
+            box-shadow: 0 0 20px rgba(8, 8, 8, 0.678);
+        }
+        100% {
+            box-shadow: 0 0 30px rgba(8, 8, 8, 0.678);
+        }
+    }
+    
+    .power-on a:hover {
+        color: green;
+        margin-bottom: 10px;
+        box-shadow: 0 0 5px rgba(8, 8, 8, 0.377);
+    }
+    
+    .go-back {
+        color: black;
+        position: absolute;
+        top: 1%;
+        font-family: 'segoe ui';
+        left: 8%;
+    }
+    
+    .go-back a {
+        text-decoration: none;
+        color: rgb(1, 207, 207);
+    }
+    
+    .go-back i {
+        font-size: 12px;
+    }
+</style>
+
+<body>
+    <div class="go-back">
+        <a href="demos.html">
+            <p>
+                <i class="fa fa-arrow-left"></i> Demos
+            </p>
+        </a>
+    </div>
+    <div id="Power" class="power-on">
+        <p>Click to power on the phone
+            <div class="power-on-anim">
+                <a title="" href="#">
+                    <i class="fa fa-minus"></i>
+                </a>
+            </div>
+        </p>
+
+    </div>
+    <div class="case">
+        <div class="screen">
+            <hr> NOKIA
+            <div class="main-screen">
+                <img id="hideDiv" class="Home" src="start.gif" alt="" width="100%" style="display:none;">
+                <img id="Start" src="home.png" alt="" width="100%" style="display:none;">
+                <div class="blank" id="Blank"></div>
+            </div>
+        </div>
+        <div class="nav-btn">
+
+            <div class="nav-left">
+
+                <button class="menu">
+                    <hr>
+                </button>
+                <button class="call">
+                    <hr>
+                </button>
+            </div>
+
+            <button class="main-btn">
+                <div class="inner-main-btn"></div>
+            </button>
+
+            <div class="nav-right">
+                <button class="opt">
+                    <hr>
+                </button>
+                <button class="home" onclick="off()">
+                    <hr>
+                </button>
+            </div>
+        </div>
+        <div class="num-btn">
+            <div class="num-top">
+                <button class="num">1.,</button>
+                <button class="num">4ghi</button>
+                <button class="num">7pqrs</button>
+                <button class="num num-btm-left">* +</button>
+
+            </div>
+
+            <div class="num-middle">
+                <button class="num">2abc</button>
+                <button class="num">5jkl</button>
+                <button class="num">8tuv</button>
+                <button class="num">0</button>
+
+            </div>
+
+            <div class="num-bottom">
+                <button class="num">3def</button>
+                <button class="num">6mno</button>
+                <button class="num">9wxyz</button>
+                <button class="num num-btm-right">~ #</button>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function off() {
+            var Temp = document.getElementById("hideDiv")
+            view = document.getElementById("Start")
+            blankview = document.getElementById("Blank")
+            power = document.getElementById("Power")
+
+            if (Temp != null)
+                Temp.style.display = "none";
+            view.style.display = "block";
+            blankview.style.display = "none";
+            power.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
+
+</html>

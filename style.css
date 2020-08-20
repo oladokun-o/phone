@@ -1,0 +1,146 @@
+html,
+body {
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI';
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.head h1 {
+    font-weight: lighter;
+    text-align: left;
+}
+
+p {
+    font-family: 'segoe ui';
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.head {
+    background: rgb(1, 207, 207);
+}
+
+.project-intro {
+    background: white;
+    color: black;
+    padding: 0px;
+    padding-top: 20px;
+    animation: slide-in 1.6s;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-150%);
+        opacity: 0.2;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.box {
+    background: white;
+}
+
+.nav {
+    text-align: right;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.753);
+    margin: 15px;
+    transition: .50s;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+.active {
+    color: white !important;
+}
+
+.main-project-intro a {
+    text-decoration: none;
+    margin: 20px;
+    transition: .50s;
+    font-weight: lighter;
+    font-size: larger;
+    background: transparent;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid rgb(1, 207, 207);
+    border-radius: 3px;
+    color: rgb(1, 207, 207);
+}
+
+.main-project-intro a:hover {
+    border: 1px solid white;
+    background: rgb(1, 207, 207);
+    color: white;
+}
+
+.active2 {
+    background: rgb(1, 207, 207) !important;
+    border: 1px solid rgb(1, 207, 207) !important;
+    color: white !important;
+}
+
+.non-active:hover {
+    color: white !important;
+}
+
+.footer {
+    padding: 0px;
+    position: fixed;
+    bottom: 5%;
+}
+
+.footer a {
+    color: rgb(1, 207, 207);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.intro-3 a {
+    color: rgb(1, 207, 207);
+}
+
+.docs h1 {
+    padding-top: 10%;
+    color: black;
+    font-weight: lighter;
+}
+
+.demo-box-contn p {
+    background: rgba(128, 128, 128, 0.733);
+    padding: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: .50s;
+}
+
+.demo-box-contn a {
+    text-decoration: none;
+    color: white;
+}
+
+.demo-box-contn p:hover {
+    background: rgba(128, 128, 128, 0.904);
+}
