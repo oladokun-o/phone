@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+</head>
+<style>
+    body {
+        background: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding-top: 10%;
+        color: black;
+    }
+    /*styling for small screens*/
+    
+    @media only screen and (max-width: 700px) {
+        body {
+            padding-top: 15%;
+        }
+        .outer-screen {
+            width: 100% !important;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .inner-screen {
+            width: 100% !important;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .screens {
+            display: block !important;
+        }
+    }
+    
+    .go-back {
+        color: black;
+        position: absolute;
+        top: 1%;
+        font-family: 'segoe ui';
+        left: 8%;
+    }
+    
+    .go-back a {
+        text-decoration: none;
+        color: rgb(1, 207, 207);
+    }
+    
+    .go-back i {
+        font-size: 12px;
+    }
+    
+    .screens {
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+    }
+    /*screens will display flex for large screens*/
+    
+    .screens {
+        display: flex;
+    }
+    
+    .inner-screen {
+        width: 50%;
+        height: 100%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .inner-screen-case {
+        border: 3px solid black;
+        height: 400px;
+        width: 250px;
+    }
+    /*outer screen styling*/
+    
+    .outer-screen {
+        width: 50%;
+        height: 100%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .outer-screen-case-contn {
+        border: 1px solid rgba(0, 0, 0, 0.11);
+        height: 420px;
+        width: 250px;
+        padding-bottom: 15px;
+        padding-right: 10px;
+        padding-left: 2px;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+        box-shadow: 0 0 30px rgba(8, 8, 8, 0.815);
+    }
+    
+    .outer-screen-case {
+        border: 1px solid rgba(0, 0, 0, 0.384);
+        height: 363px;
+        width: 250px;
+        padding-top: 50px;
+        padding-right: 4px;
+        padding-left: 2px;
+        padding-bottom: 15px;
+        border-top-right-radius: 60px;
+        border-top-left-radius: 60px;
+        border-bottom-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+    }
+    
+    .outer-screen-inner-case-contn {
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        height: 365px;
+        width: 250px;
+        padding-top: 0px;
+        border-bottom-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    
+    .outer-screen-inner-case {
+        border-bottom: 1px solid black;
+        height: 330px;
+        width: 250px;
+        padding-top: 20px;
+        border-bottom-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+    }
+    
+    .outer-screen-inner-2-case {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .outer-screen-inner-2 {
+        border: 1px solid black;
+        height: 205px;
+        width: 150px;
+    }
+    
+    .sensor {
+        border: 1px solid black;
+        height: 15px;
+        width: 5px;
+        border-radius: 6px;
+        margin-right: -145px;
+    }
+</style>
+
+<body>
+    <div class="go-back">
+        <a href="../demos.html">
+            <p>
+                <i class="fa fa-arrow-left"></i> Demos
+            </p>
+        </a>
+    </div>
+
+    <div class="screens">
+        <div class="outer-screen">
+            <div class="outer-screen-case-contn">
+                <div class="outer-screen-case">
+                    <div class="outer-screen-inner-case-contn">
+                        <div class="outer-screen-inner-case">
+                            <div style="display: flex;justify-content: center;">
+                                <div class="sensor"></div>
+                            </div>
+                            BLACKBERRY
+                            <div class="outer-screen-inner-2-case">
+                                <div class="outer-screen-inner-2">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner-screen">
+            <div class="inner-screen-case">
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

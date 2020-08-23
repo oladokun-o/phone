@@ -144,3 +144,25 @@ p {
 .demo-box-contn p:hover {
     background: rgba(128, 128, 128, 0.904);
 }
+
+.loading p {
+    animation: glow 4s infinite;
+}
+
+@keyframes glow {
+    0% {
+        background: rgba(128, 128, 128, 0.733);
+    }
+    20% {
+        background: rgba(128, 128, 128, 0.904);
+    }
+    50% {
+        background: rgba(128, 128, 128, 0.733);
+    }
+    70% {
+        background: rgba(128, 128, 128, 0.904);
+    }
+    100% {
+        background: rgba(128, 128, 128, 0.733);
+    }
+}
