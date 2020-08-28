@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blackberry 9760</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
 </head>
@@ -207,7 +207,9 @@
     .inner-screen-case {
         height: 100%;
         width: 250px;
-        border: 1px solid green;
+        border-top-right-radius: 60px;
+        border-top-left-radius: 60px;
+        box-shadow: 0 0 30px rgba(8, 8, 8, 0.918);
     }
     
     .upper-part {
@@ -216,58 +218,127 @@
         width: 248px;
         display: flex;
         justify-content: center;
+        border-top-right-radius: 60px;
+        border-top-left-radius: 60px;
+        background: rgb(162, 166, 169);
     }
     
     .upper-part-case {
         border: 1px solid indigo;
         height: 360px;
         width: 237px;
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
+        margin-top: 35px;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        background: rgb(142, 148, 147);
     }
     
     .upper-part-screen {
         border: 1px solid black;
         height: 260px;
         width: 210px;
-        margin-top: 30px;
+        margin-left: 13px;
     }
     
     .lower-part {
-        border: 1px solid blue;
-        height: 440px;
-        width: 248px;
+        height: 100px;
+        width: 250px;
         display: flex;
         justify-content: center;
+        position: relative;
+        margin-top: -22px;
     }
     
     .lower-part-case {
         border: 1px solid red;
         height: 420px;
         width: 240px;
-        margin-top: 10px;
+        margin-top: -12px;
         margin-bottom: 10px;
         display: flex;
         justify-content: center;
+        padding-right: 15px;
+        padding-left: 15px;
+        box-shadow: 0 0 20px rgba(8, 8, 8, 0.918);
+        background: white;
+        border-top-right-radius: 35px;
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 60px;
+        border-bottom-left-radius: 60px;
     }
     
     .lower-part-button {
+        border-bottom: 1px solid black;
+        height: 250px;
+        width: 260px;
+        margin-top: 0px;
+        padding-right: 0px;
+        padding-left: px;
+        margin-left: -3px;
+    }
+    
+    .lower-part-button-sh {
         border: 1px solid black;
-        height: 300px;
-        width: 230px;
+        height: 260px;
+        width: 260px;
         margin-top: 80px;
     }
     
-    .grid-container {
+    .grid-container-nav {
         display: grid;
         grid-template-columns: auto auto auto auto auto;
+        grid-gap: 20px;
+        padding: 10px;
+        padding-bottom: 35px;
+        padding-top: 35px;
     }
     
-    .btn {
+    .nav-btn {
         border: 1px solid black;
         height: 10px;
-        width: 10px;
+        width: 100%;
+    }
+    
+    .grid-container-main {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    }
+    
+    .main-btn {
+        border: 1px solid black;
+        height: 10px;
+        width: 100%;
+    }
+    
+    .grid-container-bottom {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+    
+    .bottom-btn {
+        border: 1px solid black;
+        height: 10px;
+        width: 100%;
+    }
+    
+    .lower-part-hinge {
+        border: 1px solid black;
+        height: 30px;
+        width: 200px;
+        position: absolute;
+        margin-top: -12px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        background: linear-gradient(black, white, rgba(0, 0, 0, 0.726), black);
+    }
+    
+    .inner-hinge {
+        border-bottom: 1px solid black;
+        height: 15px;
+        width: 200px;
+        background: grey;
     }
 </style>
 
@@ -308,19 +379,68 @@
             <div class="inner-screen-case">
                 <div class="upper-part">
                     <div class="upper-part-case">
+                        <img src="logo.png" width="110px" alt="">
                         <div class="upper-part-screen"></div>
                     </div>
                 </div>
                 <div class="lower-part">
+                    <div class="lower-part-hinge">
+                        <div class="inner-hinge"></div>
+                    </div>
                     <div class="lower-part-case">
-                        <div class="lower-part-button">
-                            <div class="grid-container">
-                                <div class="btn"></div>
-                                <div class="btn"></div>
-                                <div class="btn"></div>
-                                <div class="btn"></div>
-                                <div class="btn"></div>
+                        <div class="lower-part-button-sh">
+                            <div class="lower-part-button">
 
+                                <div class="grid-container-nav">
+                                    <div class="nav-btn"></div>
+                                    <div class="nav-btn"></div>
+                                    <div class="nav-btn"></div>
+                                    <div class="nav-btn"></div>
+                                    <div class="nav-btn"></div>
+                                </div>
+
+                                <div class="grid-container-main">
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                    <div class="main-btn"></div>
+                                </div>
+
+                                <div class="grid-container-bottom">
+                                    <div class="bottom-btn"></div>
+                                    <div class="bottom-btn"></div>
+                                    <div class="bottom-btn"></div>
+                                    <div class="bottom-btn"></div>
+                                    <div class="bottom-btn"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
