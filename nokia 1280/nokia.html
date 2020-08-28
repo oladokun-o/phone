@@ -21,7 +21,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     @media only screen and (min-width: 700px) {
         body {
-            padding-top: 15%;
+            padding-top: 5%;
         }
     }
     
@@ -119,11 +119,44 @@
         }
     }
     
+    @-webkit-keyframes fade {
+        0% {
+            opacity: 0.5;
+        }
+        50% {
+            opacity: 1;
+        }
+        60% {
+            opacity: 0;
+        }
+        70% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
     #Start {
         animation: fade-in 5s;
     }
     
     @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.1;
+        }
+        70% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @-webkit-keyframes fade-in {
         0% {
             opacity: 0;
         }
@@ -263,11 +296,29 @@
         }
     }
     
+    @-webkit-keyframes click {
+        0% {
+            transform: translateY(17px);
+        }
+    }
+    
     .power-on a {
         animation: expand .50s linear infinite;
     }
     
     @keyframes expand {
+        0% {
+            box-shadow: 0 0 10px rgba(8, 8, 8, 0.548);
+        }
+        50% {
+            box-shadow: 0 0 20px rgba(8, 8, 8, 0.678);
+        }
+        100% {
+            box-shadow: 0 0 30px rgba(8, 8, 8, 0.678);
+        }
+    }
+    
+    @-webkit-keyframes expand {
         0% {
             box-shadow: 0 0 10px rgba(8, 8, 8, 0.548);
         }

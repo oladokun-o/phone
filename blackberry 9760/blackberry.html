@@ -65,20 +65,6 @@
     .screens {
         display: flex;
     }
-    
-    .inner-screen {
-        width: 50%;
-        height: 100%;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .inner-screen-case {
-        border: 3px solid black;
-        height: 400px;
-        width: 250px;
-    }
     /*outer screen styling*/
     
     .outer-screen {
@@ -92,6 +78,7 @@
     }
     
     .outer-screen-case-contn {
+        z-index: -6;
         border: 1px solid rgba(34, 34, 34, 0.671);
         border-bottom: 0px solid rgba(173, 173, 173, 0.11);
         height: 420px;
@@ -115,6 +102,7 @@
         padding-top: 50px;
         padding-right: 3px;
         padding-left: 0px;
+        z-index: -5;
         padding-bottom: 15px;
         border-top-right-radius: 60px;
         border-top-left-radius: 60px;
@@ -139,6 +127,7 @@
     }
     
     .outer-screen-inner-case {
+        z-index: -4;
         border-bottom: 1px solid rgba(0, 0, 0, 0.041);
         height: 330px;
         width: 253px;
@@ -147,30 +136,136 @@
         border-top-right-radius: 27px;
         border-bottom-left-radius: 70px;
         border-bottom-right-radius: 70px;
-        background: rgba(255, 0, 0, 0);
+        background: rgba(12, 12, 12, 0.39);
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.486), rgb(10, 10, 10), rgb(10, 10, 10), rgb(10, 10, 10), rgb(10, 10, 10), rgba(0, 0, 0, 0.418));
     }
     
     .outer-screen-inner-2-case {
-        margin-top: 30px;
+        margin-top: 10px;
         display: flex;
         justify-content: center;
         background: rgba(255, 255, 255, 0);
+        z-index: -3;
     }
     
     .outer-screen-inner-2 {
         height: 205px;
         width: 150px;
-        background: rgba(255, 255, 255, 0);
+        background-size: cover;
+        position: relative;
+        z-index: 5;
+    }
+    
+    .outer-screen-inner-2 img {
+        z-index: ;
     }
     
     .sensor {
         border: 1px solid transparent;
-        height: 8px;
-        width: 3px;
+        height: 1px;
+        width: 1px;
         border-radius: 6px;
         margin-right: -145px;
-        background: rgb(40, 40, 40);
+        background: blue;
+        animation: blink 5s infinite;
+    }
+    
+    .inner-sensor {
+        border: 1px solid transparent;
+        height: 6px;
+        width: 2px;
+        border-radius: 6px;
+        background: red;
+    }
+    
+    @keyframes blink {
+        0% {
+            z-index: -10;
+        }
+    }
+    
+    iframe {
+        position: absolute;
+        left: 13%;
+        top: 23%;
+        z-index: -1;
+        border: 1px solid white;
+    }
+</style>
+<style>
+    /*inner screen styling*/
+    
+    .inner-screen {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .inner-screen-case {
+        height: 100%;
+        width: 250px;
+        border: 1px solid green;
+    }
+    
+    .upper-part {
+        border: 1px solid red;
+        height: 420px;
+        width: 248px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .upper-part-case {
+        border: 1px solid indigo;
+        height: 360px;
+        width: 237px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .upper-part-screen {
+        border: 1px solid black;
+        height: 260px;
+        width: 210px;
+        margin-top: 30px;
+    }
+    
+    .lower-part {
+        border: 1px solid blue;
+        height: 440px;
+        width: 248px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .lower-part-case {
+        border: 1px solid red;
+        height: 420px;
+        width: 240px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .lower-part-button {
+        border: 1px solid black;
+        height: 300px;
+        width: 230px;
+        margin-top: 80px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+    }
+    
+    .btn {
+        border: 1px solid black;
+        height: 10px;
+        width: 10px;
     }
 </style>
 
@@ -192,10 +287,13 @@
                             <div style="display: flex;justify-content: center;">
                                 <div class="sensor"></div>
                             </div>
-                            BLACKBERRY
+                            <div>
+                                <img src="logo.png" width="110px" alt="">
+                            </div>
                             <div class="outer-screen-inner-2-case">
                                 <div class="outer-screen-inner-2">
-                                    <img src="wallpaper.PNG" alt="wallpaper" width="100%">
+                                    <img src="wallpaper.PNG" width="100%" alt="">
+                                    <iframe src="http://free.timeanddate.com/clock/i7fmq6hj/n125/szw110/szh110/hbw0/hfc000/cf100/hgr0/fav0/fiv0/mqc05050500/mqw4/mqd98/mhc05050500/mhl15/mhw6/mhd94/hwm1/hhcbbb/hmcddd/hsceee" frameborder="0" width="110" height="110"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +304,25 @@
 
         <div class="inner-screen">
             <div class="inner-screen-case">
+                <div class="upper-part">
+                    <div class="upper-part-case">
+                        <div class="upper-part-screen"></div>
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="lower-part-case">
+                        <div class="lower-part-button">
+                            <div class="grid-container">
+                                <div class="btn"></div>
+                                <div class="btn"></div>
+                                <div class="btn"></div>
+                                <div class="btn"></div>
+                                <div class="btn"></div>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

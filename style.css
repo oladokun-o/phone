@@ -51,6 +51,17 @@ p {
     }
 }
 
+@-webkit-keyframes slide-in {
+    from {
+        transform: translateX(-150%);
+        opacity: 0.2;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
 .box {
     background: white;
 }
@@ -93,6 +104,10 @@ p {
     border: 1px solid white;
     background: rgb(1, 207, 207);
     color: white;
+}
+
+.main-project-intro {
+    padding-bottom: 50px;
 }
 
 .active2 {
@@ -150,6 +165,24 @@ p {
 }
 
 @keyframes glow {
+    0% {
+        background: rgba(128, 128, 128, 0.733);
+    }
+    20% {
+        background: rgba(128, 128, 128, 0.904);
+    }
+    50% {
+        background: rgba(128, 128, 128, 0.733);
+    }
+    70% {
+        background: rgba(128, 128, 128, 0.904);
+    }
+    100% {
+        background: rgba(128, 128, 128, 0.733);
+    }
+}
+
+@-webkit-keyframes glow {
     0% {
         background: rgba(128, 128, 128, 0.733);
     }
