@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackberry 9760</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/fontawesome.css">
 </head>
 <style>
     body {
@@ -15,7 +15,7 @@
         display: flex;
         justify-content: center;
         padding-top: 10%;
-        color: white;
+        color: black;
     }
     /*styling for small screens*/
     
@@ -26,12 +26,10 @@
         .outer-screen {
             width: 100% !important;
             height: 100px;
-            border: 1px solid black;
         }
         .inner-screen {
             width: 100% !important;
             height: 100px;
-            border: 1px solid black;
         }
         .screens {
             display: block !important;
@@ -58,7 +56,6 @@
     .screens {
         width: 100%;
         height: 100%;
-        border: 1px solid black;
     }
     /*screens will display flex for large screens*/
     
@@ -70,7 +67,6 @@
     .outer-screen {
         width: 50%;
         height: 100%;
-        border: 1px solid black;
         display: flex;
         justify-content: center;
         padding-top: 30px;
@@ -213,24 +209,27 @@
     }
     
     .upper-part {
-        border: 1px solid red;
+        border: 1px solid rgb(121, 124, 128);
         height: 420px;
         width: 248px;
         display: flex;
         justify-content: center;
         border-top-right-radius: 60px;
         border-top-left-radius: 60px;
-        background: rgb(162, 166, 169);
+        box-shadow: inset 0 0 5px rgba(8, 8, 8, 0.514);
+        background: rgba(12, 12, 12, 0.39);
+        background-image: linear-gradient(to right, rgba(83, 84, 89), rgb(139, 134, 138), rgb(171, 172, 174), rgb(186, 186, 186), rgb(192, 192, 192), rgba(83, 84, 89));
     }
     
     .upper-part-case {
-        border: 1px solid indigo;
+        border: 1px solid rgb(121, 124, 128);
         height: 360px;
         width: 237px;
         margin-top: 35px;
         border-top-right-radius: 50px;
         border-top-left-radius: 50px;
-        background: rgb(142, 148, 147);
+        background: rgba(12, 12, 12, 0.39);
+        background-image: linear-gradient(to right, rgba(218, 219, 213), rgb(109, 109, 109), rgb(104, 104, 104), rgb(164, 164, 164), rgb(216, 216, 216), rgba(243, 243, 243));
     }
     
     .upper-part-screen {
@@ -238,6 +237,7 @@
         height: 260px;
         width: 210px;
         margin-left: 13px;
+        background: black;
     }
     
     .lower-part {
@@ -250,7 +250,7 @@
     }
     
     .lower-part-case {
-        border: 1px solid red;
+        border: 1px solid rgba(165, 165, 165, 0.493);
         height: 420px;
         width: 240px;
         margin-top: -12px;
@@ -259,29 +259,41 @@
         justify-content: center;
         padding-right: 15px;
         padding-left: 15px;
-        box-shadow: 0 0 20px rgba(8, 8, 8, 0.918);
+        box-shadow: 0 0 20px rgba(8, 8, 8, 0.918), inset 0 0 8px rgba(8, 8, 8, 0.918);
         background: white;
         border-top-right-radius: 35px;
         border-top-left-radius: 35px;
         border-bottom-right-radius: 60px;
         border-bottom-left-radius: 60px;
+        background: rgba(12, 12, 12, 0.39);
+        background-image: linear-gradient(to right, rgba(76, 76, 76), rgb(101, 102, 104), rgb(129, 134, 138), rgb(177, 180, 185), rgb(204, 205, 210), rgba(213, 213, 213));
     }
     
     .lower-part-button {
         border-bottom: 1px solid black;
-        height: 250px;
-        width: 260px;
+        height: 265px;
+        width: 250px;
         margin-top: 0px;
-        padding-right: 0px;
-        padding-left: px;
+        padding-right: 2px;
+        padding-left: 5px;
         margin-left: -3px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 55px;
+        border-bottom-left-radius: 55px;
+        background: rgba(28, 28, 28);
+        background-image: linear-gradient(to right, rgba(69, 69, 69, 0.774), rgb(28, 28, 28), rgb(28, 28, 28), rgb(28, 28, 28), rgb(28, 28, 28), rgba(112, 112, 112, 0.678));
     }
     
     .lower-part-button-sh {
         border: 1px solid black;
-        height: 260px;
+        height: 275px;
         width: 260px;
         margin-top: 80px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
     }
     
     .grid-container-nav {
@@ -291,23 +303,78 @@
         padding: 10px;
         padding-bottom: 35px;
         padding-top: 35px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background: rgba(28, 28, 28);
+        background-image: linear-gradient(to right, rgba(69, 69, 69, 0.774), rgb(28, 28, 28), rgb(28, 28, 28), rgb(28, 28, 28), rgb(28, 28, 28), rgba(112, 112, 112, 0.678));
     }
     
     .nav-btn {
-        border: 1px solid black;
         height: 10px;
         width: 100%;
+    }
+    
+    .nav-btn button {
+        color: white;
+        background: transparent;
+        border: none;
     }
     
     .grid-container-main {
         display: grid;
         grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+        padding-top: 0px;
+        padding-bottom: 4px;
+        grid-row-gap: 2px;
     }
     
     .main-btn {
-        border: 1px solid black;
-        height: 10px;
+        height: 30px;
         width: 100%;
+    }
+    
+    .main-btn button {
+        height: 100%;
+        width: 100%;
+        border: 1px solid black;
+        color: white;
+        font-family: 'segoe ui';
+        font-size: xx-small;
+        box-shadow: 0 0 5px black;
+        background: rgba(12, 12, 12, 0.041);
+        background-image: linear-gradient(to right, rgba(59, 59, 59), rgb(31, 31, 31));
+    }
+    
+    .hr-btn {
+        height: 3px;
+        width: 100%;
+        background: white;
+        grid-column-start: 1;
+        grid-column-end: 11;
+    }
+    
+    button {
+        outline: none;
+    }
+    
+    button:active {
+        transform: translateY(-1px);
+    }
+    
+    .main-nav button {
+        background: linear-gradient(black, rgba(255, 255, 255, 0.041), black);
+        border: 1px solid white;
+        height: 20px;
+        width: 23px;
+        border-radius: 5px;
+        box-shadow: inset 0 0 10px black, 0 0 6px black;
+    }
+    
+    .bb-border {
+        border: 1px solid rgba(0, 0, 0, 0.473);
+        padding-top: 4px;
+        padding-bottom: -25px;
+        border-radius: 5px;
     }
     
     .grid-container-bottom {
@@ -315,30 +382,34 @@
         grid-template-columns: auto auto auto auto auto;
         padding-right: 35px;
         padding-left: 35px;
+        grid-column-gap: 3px;
     }
     
     .bottom-btn {
-        border: 1px solid black;
-        height: 10px;
+        height: 20px;
         width: 100%;
     }
     
     .lower-part-hinge {
-        border: 1px solid black;
+        border: 1px solid rgba(121, 124, 128, 0.774);
         height: 30px;
         width: 200px;
         position: absolute;
         margin-top: -12px;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
-        background: linear-gradient(black, white, rgba(0, 0, 0, 0.726), black);
+        box-shadow: inset 0 0 15px rgba(8, 8, 8, 0.795), ;
+        background: rgba(12, 12, 12, 0.39);
+        background-image: linear-gradient(to right, rgba(92, 92, 94), rgb(61, 61, 63), rgb(56, 56, 56), rgb(178, 183, 187), rgba(213, 214, 218, 0.568), rgba(48, 50, 59));
     }
     
     .inner-hinge {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid rgba(121, 124, 128, 0.507);
         height: 15px;
         width: 200px;
-        background: grey;
+        box-shadow: inset 0 0 3px rgba(8, 8, 8, 0.795), 0 0 3px rgba(8, 8, 8, 0.795);
+        background: rgba(12, 12, 12, 0.39);
+        background-image: linear-gradient(to right, rgba(32, 32, 34, 0.781), rgb(86, 87, 89), rgb(141, 147, 147), rgb(178, 183, 187), rgb(213, 214, 218), rgba(218, 219, 223));
     }
 </style>
 
@@ -392,54 +463,148 @@
                             <div class="lower-part-button">
 
                                 <div class="grid-container-nav">
-                                    <div class="nav-btn"></div>
-                                    <div class="nav-btn"></div>
-                                    <div class="nav-btn"></div>
-                                    <div class="nav-btn"></div>
-                                    <div class="nav-btn"></div>
+                                    <div class="nav-btn">
+                                        <button><i class="fa fa-plus"></i></button>
+                                    </div>
+                                    <div class="nav-btn">
+                                        <button><i class="fab fa-blackberry"></i></button>
+                                    </div>
+                                    <div class="nav-btn main-nav">
+                                        <a class="bb-border">
+                                            <button></button>
+                                        </a>
+                                    </div>
+                                    <div class="nav-btn">
+                                        <button><i class="fa fa-plus"></i></button>
+                                    </div>
+                                    <div class="nav-btn">
+                                        <button><i class="fa fa-plus"></i></button>
+                                    </div>
                                 </div>
 
                                 <div class="grid-container-main">
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
 
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
+                                    <div class="hr-btn"></div>
 
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
-                                    <div class="main-btn"></div>
+
+                                    <div class="main-btn">
+                                        <button>#<br>Q</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>1<br>W</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>2<br>E</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>3<br>R</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>(<br>T</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>)<br>Y</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>-<br>U</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>=<br>I</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>+<br>O</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button><br>P</button>
+                                    </div>
+
+                                    <div class="hr-btn"></div>
+
+                                    <div class="main-btn">
+                                        <button>#<br>Q</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>4<br>W</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>5<br>E</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>6<br>R</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>(<br>T</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>)<br>Y</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>-<br>U</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>=<br>I</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>+<br>O</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button><br>P</button>
+                                    </div>
+
+
+                                    <div class="hr-btn"></div>
+
+
+                                    <div class="main-btn">
+                                        <button>#<br>Q</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>7<br>W</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>8<br>E</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>9<br>R</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>(<br>T</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>)<br>Y</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>-<br>U</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>=<br>I</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button>+<br>O</button>
+                                    </div>
+                                    <div class="main-btn">
+                                        <button><br>P</button>
+                                    </div>
                                 </div>
 
+                                <div class="hr-btn"></div>
+
                                 <div class="grid-container-bottom">
-                                    <div class="bottom-btn"></div>
-                                    <div class="bottom-btn"></div>
-                                    <div class="bottom-btn"></div>
-                                    <div class="bottom-btn"></div>
-                                    <div class="bottom-btn"></div>
+                                    <div class="bottom-btn">
+                                        <button></button>
+                                    </div>
+                                    <div class="bottom-btn">
+                                        <button></button>
+                                    </div>
+                                    <div class="bottom-btn">
+                                        <button></button>
+                                    </div>
+                                    <div class="bottom-btn">
+                                        <button></button>
+                                    </div>
+                                    <div class="bottom-btn">
+                                        <button></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
