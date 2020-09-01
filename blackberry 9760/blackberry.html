@@ -7,13 +7,12 @@
     <title>Blackberry 9760</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="/fontawesome.css">
+    <link rel="stylesheet" href="all.css">
 </head>
 <style>
     body {
-        background: white;
+        background: rgb(1, 207, 207);
         text-align: center;
-        display: flex;
-        justify-content: center;
         padding-top: 10%;
         color: black;
     }
@@ -25,13 +24,12 @@
         }
         .outer-screen {
             width: 100% !important;
-            height: 100px;
         }
         .inner-screen {
             width: 100% !important;
-            height: 100px;
         }
-        .screens {
+        .screens-1,
+        .screens-2 {
             display: block !important;
         }
     }
@@ -46,21 +44,28 @@
     
     .go-back a {
         text-decoration: none;
-        color: rgb(1, 207, 207);
+        color: white;
     }
     
     .go-back i {
         font-size: 12px;
     }
+    /*screens will display flex for large screens*/
     
-    .screens {
+    .screens-1,
+    .screens-2 {
+        display: flex;
+        justify-content: center;
         width: 100%;
         height: 100%;
     }
-    /*screens will display flex for large screens*/
     
-    .screens {
-        display: flex;
+    .outer-screen-info {
+        width: 50%
+    }
+    
+    .inner-screen-info {
+        width: 50%
     }
     /*outer screen styling*/
     
@@ -216,6 +221,8 @@
         justify-content: center;
         border-top-right-radius: 60px;
         border-top-left-radius: 60px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
         box-shadow: inset 0 0 5px rgba(8, 8, 8, 0.514);
         background: rgba(12, 12, 12, 0.39);
         background-image: linear-gradient(to right, rgba(83, 84, 89), rgb(139, 134, 138), rgb(171, 172, 174), rgb(186, 186, 186), rgb(192, 192, 192), rgba(83, 84, 89));
@@ -253,7 +260,7 @@
         border: 1px solid rgba(165, 165, 165, 0.493);
         height: 420px;
         width: 240px;
-        margin-top: -12px;
+        margin-top: -8px;
         margin-bottom: 10px;
         display: flex;
         justify-content: center;
@@ -304,8 +311,8 @@
         grid-template-columns: auto auto auto auto auto;
         grid-gap: 20px;
         padding: 10px;
-        padding-bottom: 35px;
-        padding-top: 35px;
+        padding-bottom: 30px;
+        padding-top: 25px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         background: rgba(28, 28, 28);
@@ -334,6 +341,7 @@
     .main-btn {
         height: 30px;
         width: 100%;
+        padding-bottom: 1px;
     }
     
     .main-btn button {
@@ -393,6 +401,7 @@
     .bottom-btn {
         height: 20px;
         width: 100%;
+        padding-top: 1px;
     }
     
     .bottom-btn button {
@@ -425,9 +434,9 @@
     .lower-part-hinge {
         border: 1px solid rgba(121, 124, 128, 0.774);
         height: 30px;
-        width: 200px;
+        width: 180px;
         position: absolute;
-        margin-top: -11px;
+        margin-top: -7px;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
         box-shadow: inset 0 0 15px rgba(8, 8, 8, 0.795), ;
@@ -438,7 +447,7 @@
     .inner-hinge {
         border-bottom: 1px solid rgba(121, 124, 128, 0.507);
         height: 15px;
-        width: 200px;
+        width: 180px;
         box-shadow: inset 0 0 3px rgba(8, 8, 8, 0.795), 0 0 3px rgba(8, 8, 8, 0.795);
         background: rgba(12, 12, 12, 0.39);
         background-image: linear-gradient(to right, rgba(32, 32, 34, 0.781), rgb(86, 87, 89), rgb(141, 147, 147), rgb(178, 183, 187), rgb(213, 214, 218), rgba(218, 219, 223));
@@ -514,8 +523,8 @@
         </a>
     </div>
 
-    <div class="screens">
-        <div class="outer-screen">
+    <div class="screens-1">
+        <div class="outer-screen-info">
             <div class="outer-screen-case-contn">
                 <div class="outer-screen-case">
                     <div class="outer-screen-inner-case-contn">
@@ -538,6 +547,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="inner-screen-info">
+            <p>blah blah</p>
+        </div>
+    </div>
+    <div class="screens-2">
+        <div class="inner-screen-info">
+            <p>blah blah</p>
+        </div>
+
 
         <div class="inner-screen">
             <div class="inner-screen-case">
@@ -562,7 +581,8 @@
 
                                 <div class="grid-container-nav">
                                     <div class="nav-btn">
-                                        <button><i class="fa fa-plus"></i></button>
+                                        <button><i style="color:green;" class="fa fa-minus"></i></button>
+
                                     </div>
                                     <div class="nav-btn">
                                         <button><i class="fab fa-blackberry"></i></button>
@@ -573,10 +593,10 @@
                                         </a>
                                     </div>
                                     <div class="nav-btn">
-                                        <button><i class="fa fa-plus"></i></button>
+                                        <button><i class="fa fa-arrow-left"></i></button>
                                     </div>
                                     <div class="nav-btn">
-                                        <button><i class="fa fa-plus"></i></button>
+                                        <button><i style="color:red;" class="fa fa-minus"></i></button>
                                     </div>
                                 </div>
 
@@ -613,40 +633,40 @@
                                         <button>+<br>O</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button><br>P</button>
+                                        <button>@<br>P</button>
                                     </div>
 
                                     <div class="hr-btn"></div>
 
                                     <div class="main-btn">
-                                        <button>#<br>Q</button>
+                                        <button>*<br>A</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>4<br>W</button>
+                                        <button>4<br>S</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>5<br>E</button>
+                                        <button>5<br>D</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>6<br>R</button>
+                                        <button>6<br>F</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>(<br>T</button>
+                                        <button>/<br>G</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>)<br>Y</button>
+                                        <button>:<br>H</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>-<br>U</button>
+                                        <button>;<br>J</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>=<br>I</button>
+                                        <button>'<br>K</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>+<br>O</button>
+                                        <button>"<br>L</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button><br>P</button>
+                                        <button>del<br><i class="fa fa-arrow-left"></i></button>
                                     </div>
 
 
@@ -654,34 +674,34 @@
 
 
                                     <div class="main-btn">
-                                        <button>#<br>Q</button>
+                                        <button>#<br>alt</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>7<br>W</button>
+                                        <button>7<br>Z</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>8<br>E</button>
+                                        <button>8<br>X</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>9<br>R</button>
+                                        <button>9<br>C</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>(<br>T</button>
+                                        <button>?<br>V</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>)<br>Y</button>
+                                        <button>!<br>B</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>-<br>U</button>
+                                        <button>,<br>N</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>=<br>I</button>
+                                        <button>.<br>M</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button>+<br>O</button>
+                                        <button>&<br>$</button>
                                     </div>
                                     <div class="main-btn">
-                                        <button><br>P</button>
+                                        <button><i class="fa fa-arrow-left"></i></button>
                                     </div>
                                 </div>
 
@@ -689,7 +709,7 @@
 
                                 <div class="grid-container-bottom">
                                     <div class="bottom-btn left-rad">
-                                        <button>P</button>
+                                        <button><i class="fa fa-arrow-up"></i> aA</button>
                                     </div>
                                     <div class="bottom-btn">
                                         <button>P</button>
@@ -698,10 +718,10 @@
                                         <button>space</button>
                                     </div>
                                     <div class="bottom-btn">
-                                        <button>P</button>
+                                        <button>~</button>
                                     </div>
                                     <div class="bottom-btn right-rad">
-                                        <button>P</button>
+                                        <button><i class="fa fa-arrow-up"></i> aA</button>
                                     </div>
                                 </div>
                             </div>
@@ -715,6 +735,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 
     <script type="text/javascript">
